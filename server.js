@@ -50,10 +50,10 @@ function requireLogin(req, res, next) {
 }
 
 // Routes
-app.get('/', (req,res)=>res.redirect('/login'));
-app.get('/login',(req,res)=>res.render('login'));
-app.get('/register',(req,res)=>res.render('register'));
-app.get('/dashboard', requireLogin, (req,res)=>res.render('dashboard', { user: req.session.user }));
+app.get('/', (req,res)=>res.redirect('/dashboard'));
+app.get('/login',(req,res)=>res.redirect('/dashboard'));
+app.get('/register',(req,res)=>res.redirect('/dashboard'));
+app.get('/dashboard', (req,res)=>res.render('dashboard', { user: req.session.user }));
 app.get('/passwords', requireLogin, (req,res)=>res.render('passwords', { user: req.session.user }));
 app.get('/ids', requireLogin, (req,res)=>res.render('ids', { user: req.session.user }));
 app.get('/account', requireLogin, (req,res)=>res.render('account', { user: req.session.user }));
