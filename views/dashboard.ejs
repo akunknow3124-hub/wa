@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+		<div class="galaxy-bg"></div>
+		<div class="auth-container" style="max-width:900px;">
+			<div style="text-align:center;margin-bottom:1rem;">
+				<img src="/z93YDo01.svg" alt="WTAAK Logo" style="width:72px;height:72px;filter:drop-shadow(0 0 12px #a800ff);">
+			</div>
+			<h1 style="color:#a800ff;text-align:center;font-size:2rem;letter-spacing:2px;">WTAAK Dashboard</h1>
+		<div style="display:flex;justify-content:center;">
+			<button class="tab active" id="tab-2fa">2FA Codes</button>
+			<button class="tab" id="tab-passwords">Passwords</button>
+			<button class="tab" id="tab-ids">IDs</button>
+			<button class="tab" id="tab-account">Account Settings</button>
+			<button class="tab" id="tab-sync">Sync/Import</button>
+		</div>
+		<div class="tab-content" id="content-2fa">
+			<!-- 2FA codes UI here -->
+			<div id="totp-list"></div>
+			<form id="addTotpForm">
+				<input class="input" type="text" id="totpName" placeholder="Account Name" required>
+				<input class="input" type="text" id="totpSecret" placeholder="Secret or Scan QR" required>
+				<button class="btn" type="submit">Add 2FA Code</button>
+			</form>
+			<button class="btn" id="scanQrBtn">Scan QR Code</button>
+			<div id="qrScanner" style="display:none;"></div>
+		</div>
+		<div class="tab-content" id="content-passwords" style="display:none;">
+			<!-- Passwords UI here -->
+			<div id="passwords-list"></div>
+			<form id="addPasswordForm">
+				<input class="input" type="text" id="site" placeholder="Site" required>
+				<input class="input" type="text" id="username" placeholder="Username" required>
+				<input class="input" type="password" id="password" placeholder="Password" required>
+				<button class="btn" type="submit">Add Password</button>
+			</form>
+		</div>
+		<div class="tab-content" id="content-ids" style="display:none;">
+			<!-- IDs UI here -->
+			<div id="ids-list"></div>
+			<form id="addIdForm">
+				<input class="input" type="text" id="idName" placeholder="ID Name" required>
+				<input class="input" type="text" id="idValue" placeholder="ID Value" required>
+				<button class="btn" type="submit">Add ID</button>
+			</form>
+		</div>
+		<div class="tab-content" id="content-account" style="display:none;">
+			<!-- Account settings UI here -->
+			<button class="btn" id="exportBtn">Export Data (QR)</button>
+			<button class="btn" id="changePasswordBtn">Change Password</button>
+			<button class="btn" id="logoutBtn">Logout</button>
+			<div id="accountMsg" style="margin-top:1rem;color:#a800ff;"></div>
+		</div>
+		<div class="tab-content" id="content-sync" style="display:none;">
+			<!-- Sync/import UI here -->
+			<form id="importForm">
+				<textarea class="input" id="importData" placeholder="Paste exported data JSON here"></textarea>
+				<button class="btn" type="submit">Import Data</button>
+			</form>
+			<div id="syncMsg" style="margin-top:1rem;color:#a800ff;"></div>
+		</div>
+	</div>
+	<script src="/js/dashboard.js"></script>
+	<script src="/js/qr-scanner.js"></script>
+	<script src="/js/jsQR.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+		<div class="galaxy-bg"></div>
+		<div class="auth-container">
+			<div style="text-align:center;margin-bottom:1rem;">
+				<img src="/z93YDo01.svg" alt="WTAAK Logo" style="width:96px;height:96px;filter:drop-shadow(0 0 16px #a800ff);">
+			</div>
+			<h1 style="color:#a800ff;text-align:center;font-size:2.2rem;letter-spacing:2px;">WTAAK</h1>
+				<form id="loginForm">
+					<input class="input" type="email" id="email" placeholder="Email" required><br>
+					<input class="input" type="password" id="password" placeholder="Password" required><br>
+					<button class="btn" type="submit">Login</button>
+				</form>
+				<div style="text-align:center;margin:1rem 0;">
+					<button class="btn" id="googleLoginBtn" type="button" style="background:linear-gradient(90deg,#4285F4,#a800ff);margin-top:0.5rem;">
+						<img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;"> Login with Google
+						<img src="/google-color.svg" alt="Google" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;"> Login with Google
+					</button>
+				</div>
+			<div style="text-align:center;margin-top:1rem;">
+				<a href="/register" style="color:#a800ff;">Register</a>
+			</div>
+			<div id="loginError" style="color:#ff4a4a;text-align:center;margin-top:1rem;"></div>
+		</div>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"></script>
+	<script src="/js/login.js"></script>
+</body>
+</html>

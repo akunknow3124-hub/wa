@@ -1,0 +1,71 @@
+body {
+	background: radial-gradient(ellipse at top left, #2d0036 0%, #000 100%);
+	color: #e0e0ff;
+	font-family: 'Segoe UI', 'Arial', sans-serif;
+	min-height: 100vh;
+}
+
+.galaxy-bg {
+	background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+	background-size: cover;
+	filter: blur(2px) brightness(0.5);
+	position: absolute;
+	top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+}
+
+.auth-container {
+	background: rgba(30, 0, 50, 0.85);
+	border-radius: 16px;
+	box-shadow: 0 0 32px 8px #3a0066;
+	padding: 2rem 2.5rem;
+	margin: 5vh auto;
+	max-width: 400px;
+}
+
+.tab {
+	background: #1a0033;
+	color: #e0e0ff;
+	border: none;
+	border-radius: 8px 8px 0 0;
+	padding: 1rem 2rem;
+	margin-right: 2px;
+	cursor: pointer;
+	font-size: 1.1rem;
+}
+.tab.active {
+	background: #3a0066;
+	color: #fff;
+}
+
+.tab-content {
+	background: rgba(30, 0, 50, 0.95);
+	border-radius: 0 0 16px 16px;
+	box-shadow: 0 0 16px 4px #3a0066;
+	padding: 2rem;
+}
+
+.btn {
+	background: linear-gradient(90deg, #6e00ff 0%, #a800ff 100%);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-top: 1rem;
+	box-shadow: 0 2px 8px #3a0066;
+}
+.btn:hover {
+	background: linear-gradient(90deg, #a800ff 0%, #6e00ff 100%);
+}
+
+.input {
+	background: #2d0036;
+	color: #fff;
+	border: 1px solid #3a0066;
+	border-radius: 8px;
+	padding: 0.75rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	font-size: 1rem;
+}
